@@ -95,6 +95,12 @@ scripts/
   extract_video_frames.py
 examples/
   prompts.md
+  batch_generation_example.py
+  providers/
+    README.md
+    minimal_provider_example.py
+    http_image_provider_example.py
+    http_video_provider_example.py
 media/
   pipeline-map.jpg
   battle-sprite-grid.jpg
@@ -120,6 +126,21 @@ python scripts/chroma_key_magenta.py input.png output.png
 python scripts/sheet_contact.py frames/ contact.png --cols 6
 python scripts/extract_video_frames.py ultimate.mp4 frames/ --fps 14 --start 0.6 --duration 3.6 --width 1280
 ```
+
+## Provider Adapters, Not SDKs
+
+The skill intentionally does not ship a real image/video SDK. Model APIs change quickly, and users should own credentials, endpoints, model names, retry policy, and billing behavior.
+
+Instead, the repo includes thin adapter examples:
+
+| Example | Use it when |
+|---|---|
+| `examples/providers/minimal_provider_example.py` | You want a fake provider to test the pipeline shape locally |
+| `examples/providers/http_image_provider_example.py` | You have an image-generation HTTP proxy that returns a URL or base64 image |
+| `examples/providers/http_video_provider_example.py` | You have an async video-generation HTTP proxy with job polling |
+| `examples/batch_generation_example.py` | You want to turn a small art plan into provider requests |
+
+Read [examples/providers/README.md](examples/providers/README.md) before wiring a real provider.
 
 ## Quick Workflow
 

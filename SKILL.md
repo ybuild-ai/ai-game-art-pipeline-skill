@@ -52,6 +52,16 @@ Scripts are local utilities only. They do not call model APIs.
 - `scripts/sheet_contact.py` — make numbered contact sheets for curation.
 - `scripts/extract_video_frames.py` — extract/resize video frames for runtime texture sequences.
 
+## Provider Adapters
+
+Do not write a full vendor SDK unless the user explicitly asks for one. Prefer a thin adapter around `scripts/provider_stub.py` so credentials, endpoints, retries, billing, and model choices stay in the user's project.
+
+If the user wants examples, point them to `examples/providers/README.md` and adapt only the minimal file they need:
+
+- fake/local provider for testing the pipeline without model calls.
+- generic image HTTP provider for a user's image-generation proxy.
+- generic async video HTTP provider for a user's video-generation proxy.
+
 ## Output Standard
 
 When using this skill, produce:
@@ -70,4 +80,3 @@ When using this skill, produce:
 - Do not let cinematic video own gameplay semantics. Damage, hitboxes, target tracking, cooldown, and SFX belong in code.
 - Do not ship giant backgrounds because they look fine on desktop. Check mobile texture limits.
 - Do not treat AI output as final. The production asset is the generated image plus cleanup, anchors, timing, compression, and runtime test.
-

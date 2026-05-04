@@ -13,7 +13,8 @@ Thanks for helping improve the AI Game Art Pipeline Skill.
 ## Ground Rules
 
 - Do not commit API keys, credentials, private URLs, private file paths, or vendor-specific secrets.
-- Keep scripts provider-neutral unless the provider code is explicitly optional and documented.
+- Keep scripts provider-neutral unless the provider code is explicitly optional, documented, and credential-free.
+- Put provider wiring in `examples/providers/` unless it is a deterministic cleanup utility.
 - Prefer deterministic cleanup tools over prompt-only advice.
 - Test scripts locally before opening a PR.
 - Keep `SKILL.md` concise; put deeper material in `references/`.
@@ -22,8 +23,9 @@ Thanks for helping improve the AI Game Art Pipeline Skill.
 
 ```bash
 python3 -m py_compile scripts/*.py
-rg -n "API_KEY|SECRET|TOKEN|/Users/|sk-" .
 ```
+
+Run your preferred secret scanner before opening a PR.
 
 ## Pull Request Checklist
 
