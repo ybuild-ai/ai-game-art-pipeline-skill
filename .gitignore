@@ -1,0 +1,18 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Local generated outputs
+out/
+tmp/
+frames/
+raw/
+*.mp4
+*.mov
+*.webm
+
+# Local env/config
+.env
+.env.*
+.venv/
+venv/
