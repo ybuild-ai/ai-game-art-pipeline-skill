@@ -10,8 +10,11 @@
 [![License](https://img.shields.io/github/license/ybuild-ai/ai-game-art-pipeline-skill?style=flat)](LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/ybuild-ai/ai-game-art-pipeline-skill?style=flat)](https://github.com/ybuild-ai/ai-game-art-pipeline-skill/commits/main)
 [![Skill](https://img.shields.io/badge/Agent%20Skill-Codex%20%2F%20Claude%20Code%20%2F%20Cursor-blue)](SKILL.md)
+[![Y Build](https://img.shields.io/badge/Y%20Build-ybuild.ai-111111)](https://ybuild.ai)
 
 This skill helps agents plan, generate, clean, package, and QA game-runtime art assets: sprites, icons, backgrounds, video-to-frames animation, cinematic ultimates, anchors, compression, and runtime checks.
+
+Created by [Y Build](https://ybuild.ai), an AI agent platform for building, launching, and growing apps.
 
 It is not a prompt pack or a model leaderboard. The point is to ship assets that survive a real game loop.
 
